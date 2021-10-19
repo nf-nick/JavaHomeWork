@@ -9,8 +9,10 @@ public class Bingo {
         int x;  //переменная для вводимого числа
         System.out.println("Угадайте число от 0 до 100.");
         int num = getRandom();
+        boolean repeat=true;
         do {
             x = getInt();
+
             if (x == num) {
                 System.out.println("Вы угадали");
                 System.out.println("Число попыток - " + y);
@@ -23,7 +25,7 @@ public class Bingo {
                 System.out.println("Загаданное число меньше. Попробуйте еще раз");
                 y++;
             }
-        } while (true); // не красиво, но это первое что пришло в голову :)
+        } while (repeat); // не красиво, но это первое что пришло в голову :)
     }
 
     // Генерируем случайное число в диапазоне 0-100.
@@ -54,5 +56,11 @@ public class Bingo {
         }
         return x;
     }
+//    private static Scanner getAnsver(){
+//        Scanner ansver = new Scanner(System.in);
+//
+//        Scanner ansver1 = ansver;
+//        return ansver1;
+//    }
 
 }
