@@ -3,7 +3,7 @@ package com.pb.dn281178rnn.hw3;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BubbleSort {
+public class Array {
 
 
     public static void main(String[] args) {
