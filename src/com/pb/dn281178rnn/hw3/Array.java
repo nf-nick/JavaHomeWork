@@ -11,7 +11,7 @@ public class Array {
         for (int i = 0; i < mas.length; i++) {
             int c = i + 1; //для отображения нумерации не с нуля, а с 1 :)
             System.out.println("Введите число #" + c);
-            int x = getInt(); // Повторяющиеся действия, типа ввода данных вынесены в метод
+            int x = getInt(); // Повторяющиеся действия, типа ввода данных вынес в метод
             mas[i] = x;
         }
         System.out.println("Введены данные:");
@@ -32,6 +32,19 @@ public class Array {
         }
         System.out.println("Результат сортировки:");
         System.out.println(Arrays.toString(mas));
+        int sum = 0;
+        for (int i = 0; i <= mas.length - 1; i++) {
+            sum = sum + mas[i];
+        }
+
+        System.out.println("Сумма элементов массива = " + sum);
+        int posnum = 0;
+        for (int i = 0; i <= mas.length - 1; i++) {
+            if (mas[i] > 0) {
+                posnum = posnum + 1;
+            }
+        }
+        System.out.println("Положительных чисел в массиве - " + posnum);
     }
 
     private static int getInt() {
