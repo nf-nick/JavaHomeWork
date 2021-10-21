@@ -1,23 +1,26 @@
 package com.pb.dn281178rnn.hw3;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Bingo {
 
     public static void main(String[] args) {
-        int y = 1; //колличество попыток, в любом случае минимум 1
+        int y = 0; //число попыток
         int x;  //переменная для вводимого числа
         System.out.println("Угадайте число от 0 до 100.");
-        int num = getRandom();
-        boolean repeat=true;
+        int num = getRandom(); //загадываем число отдельным методом
+//      do/while для того чтобы запрос отработал минимум 1 раз
         do {
-            x = getInt();
+            x = getInt(); //ввод данных с контролем ввода в отдельном методе
 
             if (x == num) {
                 System.out.println("Вы угадали");
                 System.out.println("Число попыток - " + y);
+                System.out.println("End Game");
                 System.exit(0);
             }
+
             if (x < num) {
                 System.out.println("Загаданное число больше. Попробуйте еще раз");
                 y++;
@@ -25,7 +28,10 @@ public class Bingo {
                 System.out.println("Загаданное число меньше. Попробуйте еще раз");
                 y++;
             }
-        } while (repeat); // не красиво, но это первое что пришло в голову :)
+        } while (getRepeat()); // запрос на продолжение/выход
+        //
+        System.out.println("Число попыток - " + y);
+        System.out.println("Конец игры");
     }
 
     // Генерируем случайное число в диапазоне 0-100.
@@ -34,6 +40,31 @@ public class Bingo {
         int num = random.nextInt(100);
         return num;
     }
+
+    private static boolean getRepeat() {
+        String yes = "Y";
+        String no = "N";
+        System.out.println("Желаете продолжить? Y/N");
+        Scanner repeat = new Scanner(System.in);
+        String ansver;
+
+        ansver = repeat.nextLine();
+
+
+        if (yes.equals(ansver.toUpperCase())) {
+
+            return true;
+        }
+        if (no.equals(ansver.toUpperCase())) {
+            return false;
+        } else {
+            System.out.println("Ввод не распознан. Введите только оду букву Y или N");
+            getRepeat();
+        }
+
+        return true;
+    }
+
 
     // Создаем метод getInt, который будет обеспечивать ввод и контроль вводимых данных
     private static int getInt() {
@@ -56,11 +87,6 @@ public class Bingo {
         }
         return x;
     }
-//    private static Scanner getAnsver(){
-//        Scanner ansver = new Scanner(System.in);
-//
-//        Scanner ansver1 = ansver;
-//        return ansver1;
-//    }
+
 
 }
