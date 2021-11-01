@@ -3,16 +3,17 @@ package com.pb.dn281178rnn.hw5;
 public class Book {
     private String bookName;
     private String autor;
-    private int year;
+    private String year;
+    //конструктор класса
+    public Book(String bookName, String autor, String year) {
+    }
+
     private static int bookCount = 0;
+    public static int getBookCount(){
+      return bookCount;
+    }
 
-public Book (String bookName, String autor, int year){
-    this(bookName,autor);
-
-}
-
-
-    public String getBookName(String book3) {
+    public String getBookName() {
         return bookName;
     }
 
@@ -20,7 +21,7 @@ public Book (String bookName, String autor, int year){
         return autor;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
@@ -32,7 +33,12 @@ public Book (String bookName, String autor, int year){
         this.autor = autor;
     }
 
-    public void setYear(int year) {
+    public void setYear(String year) {
         this.year = year;
     }
+
+    String bookInfo(){
+        System.out.println( "bookinfo" +bookName+autor+year );
+        return bookName + " " + autor + " " + year;
+}
 }

@@ -2,13 +2,15 @@ package com.pb.dn281178rnn.hw5;
 
 public class Reader {
     private String userName;
-    private int teNumber;
+    private  String faculty;
+    private int telNumber;
     private int libraryCard;
     private String dateOfBirth;
-    private  String faculty;
 
-    
 
+//
+    public Reader(String userName, String faculty, int telNumber, int libraryCard, String dateOfBirth) {
+    }
 
 
 }
