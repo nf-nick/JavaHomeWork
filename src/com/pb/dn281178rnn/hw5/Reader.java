@@ -73,7 +73,7 @@ public class Reader {
     public void takeBook(Book... books) {
         System.out.println(this.fio + " взял книги: ");
         for (Book book : books) {
-            System.out.println(book.getName() + " (" + book.getAuthor()+ " " + book.getDate()+")");
+            System.out.println(book.getName() + " (" + book.getAuthor() + " " + book.getDate() + ")");
         }
         System.out.println();
     }
@@ -93,12 +93,12 @@ public class Reader {
     public void returnBook(Book... books) {
         System.out.println(this.fio + " вернул книги: ");
         for (Book book : books) {
-            System.out.println(book.getName() + " (" + book.getAuthor()+ " " + book.getDate()+")");
+            System.out.println(book.getName() + " (" + book.getAuthor() + " " + book.getDate() + ")");
         }
         System.out.println();
     }
 
     public String getInfo() {
-        return fio + ", №"  + number + ", #" + faculty  + ", " + dob  + ", " + phone;
+        return fio + ", №" + number + ", #" + faculty + ", " + dob + ", " + phone;
     }
 }
