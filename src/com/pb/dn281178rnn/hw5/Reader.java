@@ -5,6 +5,8 @@ public class Reader {
     private int number;
     private String faculty;
     private String dob;
+    //Был соблазн номер телефона хранить как int, но в него не влазит весь номер, а long посчитал избыточным
+    //к тому же так можно дописать "+"
     private String phone;
 
     public Reader(String fio, int number, String faculty, String dob, String phone) {
@@ -15,8 +17,6 @@ public class Reader {
         this.phone = phone;
     }
 
-    public Reader() {
-    }
 
     public String getFio() {
         return fio;
