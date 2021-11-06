@@ -21,8 +21,8 @@ public class VetClinic {
             System.out.println();
 
         }
-        System.out.println("***************************");
-        System.out.println();
+        System.out.println("***************************\n");
+
 
         Class clazz = Class.forName("com.pb.dn281178rnn.hw6.Veterinarian");
         Constructor construkt = clazz.getConstructor(new Class[]{});
