@@ -1,6 +1,6 @@
 package com.pb.dn281178rnn.hw7;
 
-public class Pants extends Clothes{
+public class Pants extends Clothes implements ManClothes, WomenClothes{
 
 
 }
