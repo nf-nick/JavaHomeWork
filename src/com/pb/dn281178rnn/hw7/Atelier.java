@@ -14,9 +14,9 @@ public class Atelier {
         };
 
         Atelier set = new Atelier();
-        set.dressMan(clothes);
+        dressMan(clothes);
         System.out.println();
-        set.dressWomen(clothes);
+        dressWomen(clothes);
     }
 
     public static void dressMan(Clothes[] clothes) {
