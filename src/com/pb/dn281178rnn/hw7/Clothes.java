@@ -1,9 +1,10 @@
 package com.pb.dn281178rnn.hw7;
 
 public abstract class Clothes {
-    private Size size;
-    private String color;
+    private final Size size;
+    private final String color;
     private double cost;
+// размер и цвет не меняются, поэтому они final и без сеттеров. А вот цены (теоретически) можно менять
 
     public Clothes(Size size, String color) {
         this.size = size;

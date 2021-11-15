@@ -2,6 +2,7 @@ package com.pb.dn281178rnn.hw7;
 
 public enum Size {
     XXS(36) {
+        //посчитал самым простым вариантом переопределить описание для отдельного пункта перечисления
         @Override
         public String getDescription() {
             return "детский размер";
@@ -25,6 +26,6 @@ public enum Size {
         return name() + "(" + EuroSize + ") " + getDescription();
     }
 
-    private int EuroSize;
+    private final int EuroSize; //так как список размеров не меняется, то поле final
 }
 

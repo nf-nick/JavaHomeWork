@@ -1,11 +1,11 @@
 package com.pb.dn281178rnn.hw7;
 
-class TeeShirt extends Clothes implements ManClothes, WomenClothes{
-    public TeeShirt(Size size, String color) {
+class Tshirt extends Clothes implements ManClothes, WomenClothes {
+    public Tshirt(Size size, String color) {
         super(size, color);
     }
 
-    public TeeShirt(Size size, String color, double cost) {
+    public Tshirt(Size size, String color, double cost) {
         super(size, color, cost);
     }
 
