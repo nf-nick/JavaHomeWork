@@ -1,5 +1,6 @@
 package com.pb.dn281178rnn.hw8;
 
+//import java.io.Console;
 import java.util.Scanner;
 
 public class OnlineShop {
@@ -9,6 +10,7 @@ public class OnlineShop {
         String login, password, confirmPassword;
         Auth auth = new Auth();
         Scanner in = new Scanner(System.in);
+
         System.out.println("\"Для входа на сайт требуется регистрация.\"");
 
 
@@ -34,6 +36,12 @@ public class OnlineShop {
             System.out.print("Логин: ");
             login = in.nextLine();
             System.out.print("Пароль: ");
+            // В идеале стоило бы использовать readPassword(), чтобы
+            //вводимый пароль не отображался и там же формат ввода задать. Но тогда придётся ловить ещё как минимум IllegalFormatException
+            //а этого нет в задании :)
+            //        Console c = System.console();
+            //        char[] pass = c.readPassword();
+            //        password = String.valueOf(pass);
             password = in.nextLine();
             try {
                 auth.signIn(login, password);
@@ -49,4 +57,6 @@ public class OnlineShop {
             System.out.println("Слишком много неудачных попыток входа.");
 
     }
+
+
 }
