@@ -11,11 +11,11 @@ public class OnlineShop {
         Auth auth = new Auth();
         Scanner in = new Scanner(System.in);
 
-        System.out.println("\"Для входа на сайт требуется регистрация.\"");
+        System.out.println("Для входа на сайт требуется регистрация\n");
 
 
         while (true) {
-            System.out.println("Регистрация нового пользователя");
+            System.out.println("--Регистрация нового пользователя--\n");
             System.out.print("Имя пользователя: ");
             login = in.nextLine();
             System.out.print("Пароль: ");
@@ -32,7 +32,7 @@ public class OnlineShop {
         }
         int attempts = 0;
         while (attempts < 3) {
-            System.out.println("Авторизация");
+            System.out.println("--Авторизация--\n");
             System.out.print("Логин: ");
             login = in.nextLine();
             System.out.print("Пароль: ");
@@ -43,12 +43,13 @@ public class OnlineShop {
             //        char[] pass = c.readPassword();
             //        password = String.valueOf(pass);
             password = in.nextLine();
+
             try {
                 auth.signIn(login, password);
                 break;
             } catch (WrongLoginException | WrongPasswordException ex) {
                 attempts++;
-                System.out.println("Неправильный логин или пароль");
+                System.out.println("Неправильный логин или пароль\n");
             }
         }
         if (attempts < 3)
